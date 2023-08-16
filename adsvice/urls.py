@@ -21,9 +21,7 @@ from users import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/', views.login, name='login'),
-    path('logout/', auth_views.LogoutView.as_view(), name='logout'),
-    path('oauth/', include('social_django.urls', namespace='social')),
-    path('', views.home, name='home'),
+    path('login/', views.view_login, name='login'),
+    path('accounts/',include('allauth.urls')),
 ]
 # print(urlpatterns)

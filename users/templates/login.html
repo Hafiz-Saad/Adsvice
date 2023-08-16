@@ -1,13 +1,13 @@
-{% extends 'base.html' %}
-{% block title %}Sign in {% endblock %}
-{% block content %} 
-
-    <div class="row">
-        <div class="col-md-8 mx-auto social-container my-2 order-md-1">
-            <button class="btn btn-primary mb-2">
-                <a href="{% url 'social:begin' 'facebook' %}">Login With Facebook</a>
-            </button>
-            <p>{% url 'social:begin' 'facebook' %}</p>
-        </div>
-    </div>
-{% endblock %}
+{% load socialaccount %}
+{% providers_media_js %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="{% provider_login_url "facebook" method="js_sdk" %}">Login Button image</a>
+</body>
+</html>
