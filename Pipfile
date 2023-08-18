@@ -6,6 +6,9 @@ name = "pypi"
 [packages]
 django = "*"
 python-dotenv = "*"
-django-allauth = "*"
+django-extensions = "*"
+werkzeug = "*"
+pyopenssl = "*"
+django-allauth = "==0.54.0"
 
 [dev-packages]

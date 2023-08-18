@@ -22,6 +22,8 @@ from users import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/', views.view_login, name='login'),
-    path('accounts/',include('allauth.urls')),
+    path('success/url/', views.view_callback),
+    path('accounts/', include('allauth.urls')),
+    path('privacy-policy', views.privacy_policy),
 ]
 # print(urlpatterns)
